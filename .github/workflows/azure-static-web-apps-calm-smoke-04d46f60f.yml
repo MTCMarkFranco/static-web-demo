@@ -18,11 +18,13 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+      - name: Delete dist
+        run: yes | rm -r dist
       - name: Create Dist Folder
         run: mkdir dist
       - name: Copy Files
         run: |
-          find . -type f ! -name '*.pdf' -exec cp --parents {} dist/ \;
+          find . -type f ! -name '*.pdf' -exec yes | cp --parents {} dist/ \;
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
