@@ -6,7 +6,7 @@
     "rewrites": [
       {
         "source": "/pdfs/(.*)",
-        "destination": "https://sastaticcontentdelivery.blob.core.windows.net/$1",
+        "destination": "https://static-pdfs-demo.azureedge.net/pdfs/$1",
         "preservePath": true
       }
     ]
