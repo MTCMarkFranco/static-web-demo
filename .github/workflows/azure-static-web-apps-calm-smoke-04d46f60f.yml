@@ -22,7 +22,7 @@ jobs:
         run: mkdir dist
       - name: Copy Files
         run: |
-          find . -type f ! -name '*.pdf' -exec yes | cp --parents {} dist/ \;
+          find . -type f ! -name '*.pdf' -exec cp --parents {} dist/ \;
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
