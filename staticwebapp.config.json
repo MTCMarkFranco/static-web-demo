@@ -1,0 +1,14 @@
+{
+    "navigationFallback": {
+      "rewrite": "/index.html",
+      "exclude": ["^/_api"]
+    },
+    "rewrites": [
+      {
+        "source": "/pdfs/(.*)",
+        "destination": "https://sastaticcontentdelivery.blob.core.windows.net/$1",
+        "preservePath": true
+      }
+    ]
+  }
+  
