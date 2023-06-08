@@ -2,13 +2,6 @@
     "navigationFallback": {
       "rewrite": "/index.html",
       "exclude": ["^/_api"]
-    },
-    "routes": [
-      {
-        "route": "/pdfs/*",
-        "redirect": "https://static-pdfs-demo.azureedge.net/pdfs/{1}",
-        "statusCode": 301
-      }
-    ]
-  }
+    }    
+}
   
