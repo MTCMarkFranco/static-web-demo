@@ -57,10 +57,6 @@ jobs:
                 Content-Encoding: gzip
                 Content-Language: fr-CA
                 Content-Disposition: inline
-
-            - glob: "**/*":
-              headers:
-                Cache-Control: public, no-cache
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
