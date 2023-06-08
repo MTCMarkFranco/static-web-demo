@@ -3,12 +3,11 @@
       "rewrite": "/index.html",
       "exclude": ["^/_api"]
     },
-    "rewrites": [
+    "routes": [
       {
-        "source": "/pdfs/(.*)",
-        "destination": "https://static-pdfs-demo.azureedge.net/pdfs/$1",
-        "preservePath": true,
-        "statusCode": 302
+        "route": "/pdfs/(.*)",
+        "redirect": "https://static-pdfs-demo.azureedge.net/pdfs/$1",
+        "statusCode": 301
       }
     ]
   }
