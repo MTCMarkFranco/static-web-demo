@@ -47,7 +47,7 @@ jobs:
         with: 
           action: upload
           connection_string: ${{ secrets.CONNECTION_STRING }}
-          container_name: pdf
+          container_name: pdfs
           local_directory: PDF
           http_headers: |
             - glob: "**/*.pdf"
