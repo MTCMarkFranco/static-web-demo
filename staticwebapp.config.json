@@ -6,7 +6,7 @@
     "routes": [
       {
         "route": "/pdfs/*",
-        "redirect": "https://static-pdfs-demo.azureedge.net/pdfs/$1",
+        "redirect": "https://static-pdfs-demo.azureedge.net/pdfs/*",
         "statusCode": 301
       }
     ]
