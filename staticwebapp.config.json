@@ -7,7 +7,8 @@
       {
         "source": "/pdfs/(.*)",
         "destination": "https://static-pdfs-demo.azureedge.net/pdfs/$1",
-        "preservePath": true
+        "preservePath": true,
+        "statusCode": 302
       }
     ]
   }
