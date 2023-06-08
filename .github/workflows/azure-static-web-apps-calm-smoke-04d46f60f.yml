@@ -48,14 +48,14 @@ jobs:
           action: upload
           connection_string: ${{ secrets.CONNECTION_STRING }}
           container_name: pdfs
-          local_directory: PDF
+          local_directory: PDF/
           http_headers: |
             - glob: "**/*.pdf"
               headers:
                 Cache-Control: public, max-age=604800, immutable
                 Content-Type: application/javascript
                 Content-Encoding: gzip
-                Content-Language: fr-CA
+                Content-Language: en-CA
                 Content-Disposition: inline
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
