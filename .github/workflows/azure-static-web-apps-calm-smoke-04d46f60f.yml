@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
       - name: Create PDF Folder
-        run: mkdir Content/${GITHUB_REF##*/}
+        run: mkdir -p -- Content Content/${GITHUB_REF##*/}
       - name: Copy PDF Files
         run: |
           find . -type f -name '*.pdf' -exec cp --parents {} Content/${GITHUB_REF##*/}/ \;
