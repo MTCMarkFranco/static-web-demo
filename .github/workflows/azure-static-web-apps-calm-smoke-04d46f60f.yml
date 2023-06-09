@@ -19,10 +19,10 @@ jobs:
         with:
           submodules: true
       - name: Create PDF Folder
-        run: mkdir Content/${GITHUB_HEAD_REF}}
+        run: mkdir Content/${GITHUB_REF##*/}
       - name: Copy PDF Files
         run: |
-          find . -type f -name '*.pdf' -exec cp --parents {} Content/${GITHUB_HEAD_REF}}/ \;
+          find . -type f -name '*.pdf' -exec cp --parents {} Content/${GITHUB_REF##*/}/ \;
       - name: Create Dist Folder
         run: mkdir dist
       - name: Copy HTML Files
@@ -48,7 +48,7 @@ jobs:
           action: upload
           connection_string: ${{ secrets.CONNECTION_STRING }}
           container_name: pdfs
-          local_directory: Content/${GITHUB_HEAD_REF}}
+          local_directory: Content/${GITHUB_REF##*/}
           http_headers: |
             - glob: "**/*.pdf"
               headers:
